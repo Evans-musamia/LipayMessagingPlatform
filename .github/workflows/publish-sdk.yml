@@ -1,4 +1,4 @@
-name: Build and Release SDK
+name: GitHub Release Assets
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  release:
+  github-release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,7 +23,7 @@ jobs:
           python -m pip install --upgrade pip build
           python -m build
 
-      - name: Create GitHub Release
+      - name: Attach wheels to GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -33,5 +33,5 @@ jobs:
           else
             gh release create "$TAG" dist/* \
               --title "lipay-sdk $TAG" \
-              --notes "Published wheel for pip install: lipay-sdk==${TAG#v}"
+              --notes "Install: pip install lipay-sdk==${TAG#v}"
           fi

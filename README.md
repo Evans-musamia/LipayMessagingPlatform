@@ -8,16 +8,29 @@ Use this library in your application (BrandFlow, Teacher, custom backends) to ch
 
 ## Installation
 
+**From PyPI (recommended):**
+
+```bash
+pip install lipay-sdk
+pip install "lipay-sdk[fastapi]"
+```
+
+Pin in `requirements.txt`:
+
+```text
+lipay-sdk==1.0.0
+```
+
 **From Git (tagged release):**
 
 ```bash
-pip install "lipay-sdk[fastapi] @ git+https://github.com/Evans-musamia/LipayMessagingPlatform.git@v1.0.0"
+pip install git+https://github.com/Evans-musamia/LipayMessagingPlatform.git@v1.0.0
 ```
 
-**Core only (no FastAPI extra):**
+**TestPyPI (maintainers — sandbox):**
 
 ```bash
-pip install git+https://github.com/Evans-musamia/LipayMessagingPlatform.git@v1.0.0
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ lipay-sdk
 ```
 
 **Editable (local development):**
@@ -27,6 +40,8 @@ git clone https://github.com/Evans-musamia/LipayMessagingPlatform.git
 cd LipayMessagingPlatform
 pip install -e ".[dev]"
 ```
+
+Publishing guide: [PYPI.md](PYPI.md)
 
 ---
 

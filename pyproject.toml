@@ -5,20 +5,24 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "lipay-sdk"
 version = "1.0.0"
-description = "Official Python SDK for the Lipay messaging platform — Customer Service Window (CSW) session guard"
+description = "Official Python SDK for Lipay Messaging Platform"
 readme = "README.md"
-license = "MIT"
+license = { text = "MIT" }
 requires-python = ">=3.10"
-authors = [{ name = "Lipay", email = "dev@lipay.store" }]
-keywords = ["lipay", "whatsapp", "messaging", "africa", "csm", "customer-service-window"]
+authors = [{ name = "Evans Musamia", email = "evans@lipay.store" }]
+maintainers = [{ name = "Lipay Platform", email = "dev@lipay.store" }]
+keywords = ["lipay", "whatsapp", "messaging", "africa", "customer-service-window", "api-sdk"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
+    "Environment :: Web Environment",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Communications",
+    "Topic :: Communications :: Telephony",
+    "Topic :: Software Development :: Libraries :: Python Modules",
     "Typing :: Typed",
 ]
 dependencies = [
@@ -28,12 +32,14 @@ dependencies = [
 
 [project.optional-dependencies]
 fastapi = ["fastapi>=0.115.0"]
-dev = ["pytest>=8.0", "pytest-asyncio>=0.24"]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24", "build>=1.0", "twine>=5.0"]
 
 [project.urls]
-Homepage = "https://github.com/Evans-musamia/LipayMessagingPlatform"
+Homepage = "https://message.lipay.store"
 Documentation = "https://github.com/Evans-musamia/LipayMessagingPlatform#readme"
 Repository = "https://github.com/Evans-musamia/LipayMessagingPlatform"
+Issues = "https://github.com/Evans-musamia/LipayMessagingPlatform/issues"
+Changelog = "https://github.com/Evans-musamia/LipayMessagingPlatform/releases"
 
 [tool.setuptools.packages.find]
 include = ["lipay_sdk*"]
