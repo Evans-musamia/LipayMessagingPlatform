@@ -11,20 +11,20 @@ Use this library in your application (BrandFlow, Teacher, custom backends) to ch
 **From Git (tagged release):**
 
 ```bash
-pip install "lipay-sdk[fastapi] @ git+https://github.com/Evans-musamia/lipay-python-sdk.git@v1.0.0"
+pip install "lipay-sdk[fastapi] @ git+https://github.com/Evans-musamia/LipayMessagingPlatform.git@v1.0.0"
 ```
 
 **Core only (no FastAPI extra):**
 
 ```bash
-pip install git+https://github.com/Evans-musamia/lipay-python-sdk.git@v1.0.0
+pip install git+https://github.com/Evans-musamia/LipayMessagingPlatform.git@v1.0.0
 ```
 
 **Editable (local development):**
 
 ```bash
-git clone https://github.com/Evans-musamia/lipay-python-sdk.git
-cd lipay-python-sdk
+git clone https://github.com/Evans-musamia/LipayMessagingPlatform.git
+cd LipayMessagingPlatform
 pip install -e ".[dev]"
 ```
 
@@ -105,7 +105,7 @@ This mirrors how Twilio-style SDKs reduce read amplification: your container avo
 Install the optional extra:
 
 ```bash
-pip install "lipay-sdk[fastapi] @ git+https://github.com/Evans-musamia/lipay-python-sdk.git@v1.0.0"
+pip install "lipay-sdk[fastapi] @ git+https://github.com/Evans-musamia/LipayMessagingPlatform.git@v1.0.0"
 ```
 
 Wire the guard on application startup:
